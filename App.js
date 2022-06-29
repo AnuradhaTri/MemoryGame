@@ -13,7 +13,8 @@ import {
   Text,
   View,
   TouchableOpacity,
-  FlatList
+  FlatList,
+  ScrollView
 } from 'react-native';
 export default class App extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ export default class App extends Component {
     const {numberOfMatch,numberOfAttempt}=this.state;
   return (
     <SafeAreaView>
-         <View style={styles.mainContainer}> 
+         <ScrollView contentContainerStyle={styles.mainContainer}> 
         <Text style={styles.headingStyle}>Memory Card Game</Text>
         <FlatList
         data={shuffled}
@@ -76,10 +77,11 @@ export default class App extends Component {
      }}
     
     />
-   
+   <View style={{marginBottom:60}}>
    <Text>Number Of Match:{numberOfMatch}</Text>
    <Text>Number of Attempt:{numberOfAttempt}</Text> 
-    </View>
+   </View>
+    </ScrollView>
     </SafeAreaView>
   );
  }
