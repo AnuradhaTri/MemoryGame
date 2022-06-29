@@ -79,7 +79,7 @@ export default class App extends Component {
     />
    <View style={{marginBottom:60}}>
    <Text>Number Of Match:{numberOfMatch}</Text>
-   <Text>Number of Attempt:{numberOfAttempt}</Text> 
+   <Text>Number of Attempt:{parseInt(numberOfAttempt)}</Text> 
    </View>
     </ScrollView>
     </SafeAreaView>
